@@ -47,9 +47,7 @@ public class Graph<T> {
 
         for (Vertex<T> tmp : v.getAdjacent()) {
             if (!visited.contains(tmp)) {
-                if (dfsFind(tmp, target, visited)) {
-                    return true;
-                }
+                return dfsFind(tmp, target, visited);
             }
         }
 
